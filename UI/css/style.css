@@ -152,3 +152,43 @@ h1.deepshadow {
     border-style: solid;
  
 }
+
+.SignUpPage {
+	
+	text-align: center;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	
+}
+
+.SignUpForm {
+	
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-align: left;
+	width: 60%;
+	margin-top:1em;
+	margin-bottom:1em;
+	padding-top: 1.5em
+	padding-buttom: 1.5em
+	padding-top: 1.5em;
+	padding-left: 1em;
+	font-size: 18px;
+	background-color: #FFF;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	-webkit-box-shadow: 1px 1px 5px 1px #585858;
+	box-shadow: 1px 1px 5px 1px #585858;
+}
+
+.copyright{
+    display:block;
+
+    /*set the div in the bottom right corner*/
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:100%;
+    
+    /*give it some background and border*/
+    background:#eee;
+    border:1px solid #ddd;
+  }

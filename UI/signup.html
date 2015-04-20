@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+<!-- layout in cake-->
+<div class="container"> 
+  
+  <!-- login field   in view log-->
+  <div class="container SignUpPage">
+    <h1 class="deepshadow">Sign Up</h1>
+    <div class="container SignUpForm">
+      <form id="add-account-form" method="" action="" class="form-horizontal decorform" style="margin-top:2em;padding-left:2em">
+        <div class="form-group">
+          <label for="username" class="col-sm-2 control-label">Username</label>
+          <div class="col-sm-7" >
+            <input name="username" type="text" class="form-control" id="username" placeholder="username" required>
+          </div>
+        </div>
+        <div class="form-group text-left">
+          <label for="password" class="col-sm-2 control-label">Password </label>
+          <div class="col-sm-5" >
+            <input name="password" id="pass1" type="password" class="form-control" id="password" placeholder="password" required>
+          </div>
+          <label style="color:#999">* more than 2 to 8 alphabet </label>
+        </div>
+        <div class="form-group text-left">
+          <label for="password2" class="col-sm-2 control-label">Password </label>
+          <div class="col-sm-5" >
+            <input onkeyup="checkPass(); return false;" name="password2" id="pass2" type="password" class="form-control" id="password2" placeholder="password" required>
+            <span id="confirmMessage" class="confirmMessage"></span> </div>
+          <label style="color:#999">* re-enter password</label>
+        </div>
+        <hr />
+        <div class="form-group text-left">
+          <label for="firstname" class="col-sm-2 control-label">Firstname </label>
+          <div class="col-sm-9" >
+            <input name="firstname" type="text" class="form-control" id="firstname" placeholder="firstname" required>
+          </div>
+        </div>
+        <div class="form-group text-left">
+          <label for="lastname" class="col-sm-2 control-label">Lastname </label>
+          <div class="col-sm-9" >
+            <input name="lastname" type="text" class="form-control" id="lastname" placeholder="lastname" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-7" >
+            <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="email" required>
+          </div>
+        </div>
+       
+        <button class="btn btn-primary center-block" onclick="" type="button">Sign Up</button><br />
+      </form>
+    </div>
+  </div>
+  <!--end login field   in view log--> 
+  
+</div>
+<!--end layout in cake-->
+
+<div class="terms">
+  <center>© 2015 PABO Webtechnology Group . All rights reserved.</center>
+
+</div>
+</body>
+<script language="JavaScript">
+    var canPass = false;
+    
+    function checkPass(){
+    
+        
+        var pass1 = document.getElementById('pass1');
+        var pass2 = document.getElementById('pass2');
+        var message = document.getElementById('confirmMessage');
+        var goodColor = "#66cc66";
+        var badColor = "#ff6666";
+        if(pass1.value == pass2.value && pass1.value.length > 1 && pass1.value.length < 9){
+            canPass = true;
+            pass2.style.backgroundColor = goodColor;
+            message.style.color = goodColor;
+            message.innerHTML = "Passwords Match!"
+        }else{
+            canPass = false;
+            pass2.style.backgroundColor = badColor;
+            message.style.color = badColor;
+            message.innerHTML = "Passwords do not match or wrong length !";
+        }
+    }
+    function verifyPass(){
+        if (canPass == false){
+            alert("Please check your password");
+            return false;
+        } else {
+            document.getElementById('add-account-form').submit();
+            return true;
+        }
+    }
+</script>
+
+</html>
