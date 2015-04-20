@@ -14,29 +14,69 @@
 <div class="container"> 
   
   <!-- login field   in view log-->
-	<div class="container logInPage">
-    <h1 style="text-shadow: 1px 2px 5px #FFFFFF;">Quiz Up</h1>
-    <div class="container logInForm">
-      <form class="form-horizontal" method="post" action="verifyLogin.php">
-        <div class="form-group">
-          <label for="username" class="col-sm-2 control-label">Username</label>
-          <div class="col-sm-9" style="margin-left:1em">
-            <input name="username" type="text" class="form-control" id="username" placeholder="username" required>
+	<div class="container SignUpPage">
+    <h1 class="deepshadow">Sign Up</h1>
+    <div class="container SignUpForm">
+       <form id="add-account-form" method="post" action="createUserbyAdmin.php" class="form-horizontal decorform" style="margin-top:2em;padding-left:2em">
+          <div class="form-group">
+            <label for="username" class="col-sm-2 control-label">Username</label>
+            <div class="col-sm-7" >
+              <input name="username" type="text" class="form-control" id="username" placeholder="username" required>
+            </div>
           </div>
-        </div>
-        <div class="form-group">
-          <label for="password" class="col-sm-2 control-label">Password </label>
-          <div class="col-sm-9" style="margin-left:1em">
-            <input name="password" type="password" class="form-control" id="password" placeholder="Password" required>
+          <div class="form-group text-left">
+            <label for="password" class="col-sm-2 control-label">Password </label>
+            <div class="col-sm-5" >
+              <input name="password" id="pass1" type="password" class="form-control" id="password" placeholder="password" required>
+            </div>
+            <label style="color:#999">* more than 2 to 8 alphabet </label>
           </div>
-        </div>
-        <div class="form-group" style="margin-left:6.5em">
-          <div class="col-sm-offset-2 col-sm-10">
-           
-            <button type="submit" class="btn btn-default">Sign in</button>
+          <div class="form-group text-left">
+            <label for="password2" class="col-sm-2 control-label">Password </label>
+            <div class="col-sm-5" >
+              <input onkeyup="checkPass(); return false;" name="password2" id="pass2" type="password" class="form-control" id="password2" placeholder="password" required>
+              <span id="confirmMessage" class="confirmMessage"></span>
+            </div>
+            <label style="color:#999">* re-enter password</label>
           </div>
-        </div>
-      </form>
+          <hr />
+          <div class="form-group text-left">
+            <label for="firstname" class="col-sm-2 control-label">Firstname </label>
+            <div class="col-sm-9" >
+              <input name="firstname" type="text" class="form-control" id="firstname" placeholder="firstname" required>
+            </div>
+          </div>
+          <div class="form-group text-left">
+            <label for="lastname" class="col-sm-2 control-label">Lastname </label>
+            <div class="col-sm-9" >
+              <input name="lastname" type="text" class="form-control" id="lastname" placeholder="lastname" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-7" >
+              <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="email" required>
+            </div>
+          </div>
+          <div class="form-group text-left">
+            <label for="citizenid" class="col-sm-2 control-label">Citizen ID </label>
+            <div class="col-sm-7">
+              <input name="citizenid" type="text" class="form-control" id="citizenid" placeholder="citizen ID" maxlength="13" required>
+            </div>
+          </div>
+          <div class="form-group text-left">
+            <label for="citizenid" class="col-sm-2 control-label">Role</label>
+            <div class="col-sm-5" >
+              <select name="role" form="add-account-form" class="form-control" style="color:#000">
+                <option value="a">Administrator</option>  
+                <option value="w">Casual Worker</option>
+                <option value="c">CEO & Board</option>
+                <option value="e">Employee</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="return verifyPass();" type="button"><span><img src="https://cdn1.iconfinder.com/data/icons/round-black-icons-2/78/plus-20.png" ></span> Add Account</button>
+        </form>
     </div>
   </div>
   <!--end login field   in view log-->
@@ -44,7 +84,41 @@
   
 </div>
 <!--end layout in cake-->
-</body><footer class="text-center ">
+</body>
+<script language="JavaScript">
+    var canPass = false;
+    
+    function checkPass(){
+    
+        
+        var pass1 = document.getElementById('pass1');
+        var pass2 = document.getElementById('pass2');
+        var message = document.getElementById('confirmMessage');
+        var goodColor = "#66cc66";
+        var badColor = "#ff6666";
+        if(pass1.value == pass2.value && pass1.value.length > 1 && pass1.value.length < 9){
+            canPass = true;
+            pass2.style.backgroundColor = goodColor;
+            message.style.color = goodColor;
+            message.innerHTML = "Passwords Match!"
+        }else{
+            canPass = false;
+            pass2.style.backgroundColor = badColor;
+            message.style.color = badColor;
+            message.innerHTML = "Passwords do not match or wrong length !";
+        }
+    }
+    function verifyPass(){
+        if (canPass == false){
+            alert("Please check your password");
+            return false;
+        } else {
+            document.getElementById('add-account-form').submit();
+            return true;
+        }
+    }
+</script>
+<footer class="text-center ">
   	<p>© 2015 PABO Webtechnology Group . All rights reserved.</p>
-  </footer>
+</footer>
 </html>
