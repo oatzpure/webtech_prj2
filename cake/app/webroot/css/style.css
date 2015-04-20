@@ -149,12 +149,8 @@ h1.deepshadow {
     background: url("http://icons.iconarchive.com/icons/graphicloads/100-flat-2/256/inside-logout-icon.png") no-repeat scroll 0% 0% / cover transparent;
     box-shadow: 2px 2px 3px 1px #3C3C3C;
     border-color: #DC2201;
-    border-style: solid;
+    border-style: solid;}
  
-<<<<<<< HEAD
-}
-=======
-}
 
 .SignUpPage {
 	
@@ -182,17 +178,16 @@ h1.deepshadow {
 	box-shadow: 1px 1px 5px 1px #585858;
 }
 
-.copyright{
-    display:block;
+.copyright {
+    display: block;
 
     /*set the div in the bottom right corner*/
-    position:absolute;
-    bottom:0;
-    right:0;
-    width:100%;
-    
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+
     /*give it some background and border*/
-    background:#eee;
-    border:1px solid #ddd;
-  }
->>>>>>> origin/master
+    background: #eee;
+    border: 1px solid #ddd;
+}
