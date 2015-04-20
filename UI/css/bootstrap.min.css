@@ -2662,7 +2662,7 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
 	border-color: #ccc
 }
 .btn-default .badge {
-	color: #fff;
+	color: #0BBB37;
 	background-color: #333
 }
 .btn-primary {
@@ -4081,8 +4081,9 @@ a.label:focus, a.label:hover {
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: baseline;
-	background-color: #777;
+	background-color: #CE0000;
 	border-radius: 10px
+	
 }
 .badge:empty {
 	display: none
