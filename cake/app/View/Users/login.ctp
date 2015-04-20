@@ -49,17 +49,16 @@
                         <tr>
                             <td align="right">
 
-                        <?php echo $this->Form->submit('Sign in', [
+                        <?php echo $this->Form->submit('Sign In', [
                             'class' => 'btn btn-default'
                         ]);?>
                             </td>
                             <td>&nbsp;&nbsp;</td>
                             <td align="left">
+                                <?php echo $this->Html->link('Sign Up', array('controller' => 'users','action'=> 'add'),
+                                    array( 'class' => 'btn btn-default'))?>
 
-                        <?php echo $this->Form->button('Sign up', [
-                            'type' => 'button',
-                            'class' => 'btn btn-default'
-                        ]);?>
+
                             </td>
                         <tr>
                    </table>

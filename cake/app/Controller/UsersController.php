@@ -25,14 +25,27 @@ class UsersController extends AppController {
 
     public function add() {
         if ($this->request->is('post')) {
-            $this->User->create();
-            if ($this->User->save($this->request->data)) {
-                $this->Session->setFlash(__('The user has been saved'));
-                return $this->redirect(array('action' => 'index'));
+            //pr($this->request->data);
+            $data = [
+                'User' => [
+                    'username' => trim($this->request->data['User']['username']),
+                    'firstname' => trim($this->request->data['User']['firstname']),
+                    'lastname' => trim($this->request->data['User']['lastname']),
+                    'email' => trim($this->request->data['User']['email']),
+                    'password' => trim($this->request->data['User']['password']),
+                    'role' => '2',
+                    'status' => '',
+                    'created' => date("Y-m-d H:i:s"),
+                    'modified' => date("Y-m-d H:i:s"),
+
+                ]
+            ];
+            if($this->User->saveAssociated($data)){
+                $this->redirect(['action' => 'login']);
+                $this->Session->setFlash("suscess");
+            }else{
+                $this->Session->setFlash("fail");
             }
-            $this->Session->setFlash(
-                __('The user could not be saved. Please, try again.')
-            );
         }
     }
 
@@ -93,9 +106,7 @@ class UsersController extends AppController {
 
             }
             else{
-
-                    $this->redirect(['action' => 'index']);
-
+                $this->redirect(['action' => 'index']);
             }
         }
     }

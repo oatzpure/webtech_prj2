@@ -45,11 +45,46 @@ maximum-scale=1, user-scalable=no">
     ?>
 </div>
 <!--end layout in cake-->
+<div class="terms">
+    <center>© 2015 PABO Webtechnology Group . All rights reserved.</center>
+
+</div>
 </body>
 <script>
     $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip()
     });
+    var canPass = false;
+
+    function checkPass(){
+
+
+        var pass1 = document.getElementById('pass1');
+        var pass2 = document.getElementById('pass2');
+        var message = document.getElementById('confirmMessage');
+        var goodColor = "#66cc66";
+        var badColor = "#ff6666";
+        if(pass1.value == pass2.value && pass1.value.length > 1 && pass1.value.length < 9){
+            canPass = true;
+            pass2.style.backgroundColor = goodColor;
+            message.style.color = goodColor;
+            message.innerHTML = "Passwords Match!"
+        }else{
+            canPass = false;
+            pass2.style.backgroundColor = badColor;
+            message.style.color = badColor;
+            message.innerHTML = "Passwords do not match or wrong length !";
+        }
+    }
+    function verifyPass(){
+        if (canPass == false){
+            alert("Please check your password");
+            return false;
+        } else {
+            document.getElementById('add-account-form').submit();
+            return true;
+        }
+    }
 
 </script>
 </html>
