@@ -4,7 +4,7 @@
     <?php echo $this->Session->flash('auth'); ?>
     <!-- login field   in view log-->
     <div class="container logInPage">
-        <h1 style="text-shadow: 1px 2px 5px #FFFFFF;">Quiz Up</h1>
+        <h1 class="deepshadow">Quiz Up</h1>
         <div class="container logInForm">
             <?php echo $this->Form->create('User', [
                 'url' => [
@@ -34,7 +34,7 @@
                     <?php echo $this->Form->input('password', [
                         'label' => false,
                         'div' => false,
-                        'type' => 'text',
+                        'type' => 'password',
                         'required',
                         'placeholder' => 'Password',
                         'class' => 'form-control'

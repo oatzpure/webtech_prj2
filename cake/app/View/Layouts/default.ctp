@@ -27,6 +27,8 @@ maximum-scale=1, user-scalable=no">
     <?php
     echo $this->Html->css('bootstrap.min.css');
     echo $this->Html->css('style.css');
+    echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js');
+    echo $this->Html->script('http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js');
     echo $this->fetch('meta');
     echo $this->fetch('css');
     ?>
@@ -44,4 +46,10 @@ maximum-scale=1, user-scalable=no">
 </div>
 <!--end layout in cake-->
 </body>
+<script>
+    $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
+
+</script>
 </html>

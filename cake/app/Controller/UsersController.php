@@ -93,9 +93,9 @@ class UsersController extends AppController {
 
             }
             else{
-                $this->Session->setFlash(
-                    __('TTTTTTT')
-                );
+
+                    $this->redirect(['action' => 'index']);
+
             }
         }
     }
