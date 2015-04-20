@@ -18,3 +18,177 @@
 	-webkit-box-shadow: 1px 1px 5px 1px #585858;
 	box-shadow: 1px 1px 5px 1px #585858;
 }
+
+
+.circular_profile {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 150px;
+    background: url("https://cdn3.iconfinder.com/data/icons/ballicons-free/128/wooman.png") no-repeat scroll 0% 0% / cover transparent;
+    box-shadow: 2px 2px 3px 1px #3C3C3C;
+    border-color: #DC2201;
+    border-style: solid;
+   
+}
+.circular_add {
+	margin-top:1em;
+    margin-left:1.5em;
+    margin-right: auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 150px;
+    background: url("https://cdn4.iconfinder.com/data/icons/keynote-and-powerpoint-icons/256/Plus-128.png") no-repeat scroll 0% 0% / cover transparent;
+    box-shadow: 2px 2px 3px 1px #3C3C3C;
+    border-color: #DC2201;
+    border-style: solid;
+  
+}
+.circular_manage_quiz {
+	margin-top:1em;
+    margin-left: 1.5em;
+    margin-right: auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 150px;
+    background: url("https://cdn3.iconfinder.com/data/icons/brain-games/128/Quiz-Games-red.png") no-repeat scroll 0% 0% / cover transparent;
+    box-shadow: 2px 2px 3px 1px #3C3C3C;
+    border-color: #DC2201;
+    border-style: solid;
+   
+}
+
+.circular_manage_account {
+	margin-top:1em;
+    margin-left:1.5em;
+    margin-right: auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 150px;
+    background: url("https://cdn4.iconfinder.com/data/icons/simplicio/128x128/user_manage.png") no-repeat scroll 0% 0% / cover transparent;
+    box-shadow: 2px 2px 3px 1px #3C3C3C;
+    border-color: #DC2201;
+    border-style: solid;
+ 
+}
+
+.showcontent{
+
+	height:500px; /*remove this when php content is coming*/
+	background-color:#FFF;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	-webkit-box-shadow: 1px 1px 5px 1px #585858;
+	box-shadow: 1px 1px 5px 1px #585858;
+	}
+h1 {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 50px;
+  padding: 5px 5px;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+}
+
+h1.deepshadow {
+  color: #e0dfdc;
+  
+  letter-spacing: .1em;
+  text-shadow: 0 -1px 0 #ffffff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+}
+
+
+.circular_profile_user {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 150px;
+    background: url("https://cdn3.iconfinder.com/data/icons/ballicons-free/128/man.png") no-repeat scroll 0% 0% / cover transparent;
+    box-shadow: 2px 2px 3px 1px #3C3C3C;
+    border-color: #DC2201;
+    border-style: solid;
+   
+}
+.circular_profile_info_user {
+	margin-top:1em;
+    margin-left:1.5em;
+    margin-right: auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 150px;
+    background: url("https://cdn4.iconfinder.com/data/icons/ballicons-2-free/100/pencil-128.png") no-repeat scroll 0% 0% / cover transparent;
+    box-shadow: 2px 2px 3px 1px #3C3C3C;
+    border-color: #DC2201;
+    border-style: solid;
+  
+}
+.circular_badges_user {
+	margin-top:1em;
+    margin-left: 1.5em;
+    margin-right: auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 150px;
+    background: url("https://cdn1.iconfinder.com/data/icons/anchor/128/star.png") no-repeat scroll 0% 0% / cover transparent;
+    box-shadow: 2px 2px 3px 1px #3C3C3C;
+    border-color: #DC2201;
+    border-style: solid;
+   
+}
+
+
+.circular_logout {
+	margin-top:1em;
+    margin-left:1.5em;
+    margin-right: auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 150px;
+    background: url("http://icons.iconarchive.com/icons/graphicloads/100-flat-2/256/inside-logout-icon.png") no-repeat scroll 0% 0% / cover transparent;
+    box-shadow: 2px 2px 3px 1px #3C3C3C;
+    border-color: #DC2201;
+    border-style: solid;
+ 
+}
+
+.SignUpPage {
+	
+	text-align: center;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	
+}
+
+.SignUpForm {
+	
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-align: left;
+	width: 60%;
+	margin-top:1em;
+	margin-bottom:1em;
+	padding-top: 1.5em
+	padding-buttom: 1.5em
+	padding-top: 1.5em;
+	padding-left: 1em;
+	font-size: 18px;
+	background-color: #FFF;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	-webkit-box-shadow: 1px 1px 5px 1px #585858;
+	box-shadow: 1px 1px 5px 1px #585858;
+}
+
+.copyright{
+    display:block;
+
+    /*set the div in the bottom right corner*/
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:100%;
+    
+    /*give it some background and border*/
+    background:#eee;
+    border:1px solid #ddd;
+  }
