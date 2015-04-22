@@ -7,7 +7,7 @@
     <table class="pull-right">
         <tr>
             <td> <!--   rank in cake-->
-                <button class="btn btn-success" style="margin-top:3.5em;margin-right:1em"><img src="https://cdn2.iconfinder.com/data/icons/fatcow/16x16/crown_gold.png" />Ranking</button></td>
+                <button class="btn btn-default" style="margin-top:3.5em;margin-right:1em"><img src="https://cdn2.iconfinder.com/data/icons/fatcow/16x16/crown_gold.png" />Ranking</button></td>
             <td><!--   search in cake-->
                 <form class="navbar-form " role="search" style="margin-top:4em;margin-right:1em">
                     <div class="form-group">
