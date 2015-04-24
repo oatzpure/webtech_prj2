@@ -90,6 +90,9 @@ h1 {
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
 }
+h2{
+	font-size: 40px;
+	}
 
 h1.deepshadow {
   color: #e0dfdc;
@@ -334,4 +337,32 @@ box-shadow: 1px 1px 1px 1px #D4D4D4;
 	-webkit-box-shadow: 1px 1px 1px 1px #D4D4D4;
 box-shadow: 1px 1px 1px 1px #D4D4D4;
 	padding:1em;
+	}
+.badgestyle1 {
+	margin:1em;
+	background-color:#FCFCFC;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	-webkit-box-shadow: 1px 1px 1px 1px #D4D4D4;
+	box-shadow: 1px 1px 1px 1px #D4D4D4;
+	}
+.badgestyle2 {	
+	background-color:#E6F9FF;
+	-webkit-border-radius: 10px 0px 0px 10px;
+	border-radius: 10px 0px 0px 10px;
+	-webkit-box-shadow: 1px 1px 1px 1px #D4D4D4;
+	box-shadow: 1px 1px 1px 1px #D4D4D4;
+	}
+.decorform2{
+	
+	-webkit-border-radius: 5px;
+border-radius: 5px;
+	background:#EAEAFF;padding:0.1em}
+.decorform3{
+	color:#FFF;
+	background-color: #337AB7;
+	text-align:left;	
+	-webkit-box-shadow: 1px 1px 1px 1px #E0E0E0;
+	box-shadow: 1px 1px 1px 1px #E0E0E0;
+	padding:0.5em;
 	}
