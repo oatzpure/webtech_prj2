@@ -65,7 +65,7 @@
             	<div class="row">
                 	<div class="col-sm-2"></div>
                     <div class="col-sm-8">
-                    	<form class="form-horizontal">
+                    	<form class="form-horizontal" id="deckdescription">
                 			 <div class="form-group text-left">
               					<label for="deckname" class="col-sm-3 control-label">Deck Name</label>
               					<div class="col-sm-3" >
@@ -84,9 +84,43 @@
                             </div>
                 		</form>
                     </div>
-                    <div class="col-sm-2"></div>
+                    <div class="col-sm-2"></div>                    
+                </div>
+                <div id="cardindeck">
+                	<div class="col-sm-12 badgestyle1" id='card1' style="padding-top:1em;padding-bottom:1em">
+                    	<form class="form-horizontal"><!-- this loop to card 1-15-->
+                        <div class="form-group text-left">
+              					<label for="deckname" class="col-sm-2 control-label">1.) Card Answer</label>
+              					<div class="col-sm-3" >
+                					<input name="deckname" type="text" class="form-control" id="deckname" placeholder="Card Answer" required>
+              					</div>
+            		 		</div>                        
+                       
+                        <div class="row">
+                        	<div class="col-sm-2"></div>
+                        	<div class="col-sm-4 text-left">
+                            	<div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+               					 <label >Card Front</label>
+                				 <input type="file" name="file_picture" id="cardfront1" required>
+                            </div>
+                            <div class="col-sm-4">
+                            	<div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+               					 <label>Card Back</label>
+                				 <input type="file" name="file_picture" id="cardback1" required>
+                            </div>
+                            <div class="col-sm-2"></div>                         
+                           
+                        </div>
+                         </form>
+                    </div>
                 </div>
                 
+                <div class="row"><!--this part hav to connect to form that in upper part-->
+                	<div class="col-sm-4"></div>                    
+                    <div class="col-sm-2"><button class="btn btn-primary">Add Deck</button></div>
+                    <div class="col-sm-2"><button class="btn btn-danger">Cancel</button></div>
+                    <div class="col-sm-4"></div>
+                </div>
                 
             </div>           
         </div>    
