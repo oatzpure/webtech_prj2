@@ -1016,11 +1016,11 @@ html {
 	-webkit-tap-highlight-color: rgba(0,0,0,0)
 }
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
 	font-size: 14px;
 	line-height: 1.42857143;
 	color: #333;
-	background-image: url(../img/wtHwPEJ.jpg);
+	background:url(../img/wtHwPEJ.jpg) fixed;
 	
 }
 button, input, select, textarea {
@@ -2662,7 +2662,7 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
 	border-color: #ccc
 }
 .btn-default .badge {
-	color: #fff;
+	color: #0BBB37;
 	background-color: #333
 }
 .btn-primary {
@@ -4081,8 +4081,9 @@ a.label:focus, a.label:hover {
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: baseline;
-	background-color: #777;
+	background-color: #CE0000;
 	border-radius: 10px
+	
 }
 .badge:empty {
 	display: none

@@ -15,13 +15,6 @@ class UsersController extends AppController {
         $this->set('users', $this->paginate());
     }
 
-    public function view($id = null) {
-        $this->User->id = $id;
-        if (!$this->User->exists()) {
-            throw new NotFoundException(__('Invalid user'));
-        }
-        $this->set('user', $this->User->read(null, $id));
-    }
 
     public function add() {
         if ($this->request->is('post')) {
@@ -49,23 +42,8 @@ class UsersController extends AppController {
         }
     }
 
-    public function edit($id = null) {
-        $this->User->id = $id;
-        if (!$this->User->exists()) {
-            throw new NotFoundException(__('Invalid user'));
-        }
-        if ($this->request->is('post') || $this->request->is('put')) {
-            if ($this->User->save($this->request->data)) {
-                $this->Session->setFlash(__('The user has been saved'));
-                return $this->redirect(array('action' => 'index'));
-            }
-            $this->Session->setFlash(
-                __('The user could not be saved. Please, try again.')
-            );
-        } else {
-            $this->request->data = $this->User->read(null, $id);
-            unset($this->request->data['User']['password']);
-        }
+    public function editprofile($id = null) {
+
     }
 
     public function delete($id = null) {
@@ -86,15 +64,13 @@ class UsersController extends AppController {
         return $this->redirect(array('action' => 'index'));
     }
 
-    public function beforeFilter() {
-        parent::beforeFilter();
-        // Allow users to register and logout.
-        $this->Auth->allow('add', 'logout');
+    public function editpass() {
+
     }
 
     public function login() {
         if ($this->request->is('post')) {
-            pr($this->request->data);
+            //pr($this->request->data);
             $user = $this->User->find('first', [
                 'conditions' => [
                     'User.username' => trim($this->request->data['User']['username']),
@@ -106,13 +82,14 @@ class UsersController extends AppController {
 
             }
             else{
+
                 $this->redirect(['action' => 'index']);
             }
         }
     }
 
     public function logout() {
-        return $this->redirect($this->Auth->logout());
+
     }
 
 }
