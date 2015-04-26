@@ -30,7 +30,6 @@ class UsersController extends AppController {
                     'status' => '',
                     'created' => date("Y-m-d H:i:s"),
                     'modified' => date("Y-m-d H:i:s"),
-
                 ]
             ];
             if($this->User->saveAssociated($data)){
@@ -55,12 +54,18 @@ class UsersController extends AppController {
                 ]
             ];
             if($this->User->save($data)){
+                $user = $this->User->find('first', [
+                    'conditions' => [
+                        'User.id' => $User['User']['id']
+                    ],
+                    'recursive' => -1
+                ]);
+                $this->setSession($user);
                 $this->Session->setFlash('Edit proflie is success','default', array("class" => 'alert alert-success','style' =>'position:'));
                 $this->redirect([
                     'controller' => 'users',
                     'action' => 'profile'
                 ]);
-
             }else{
 
             }
@@ -90,9 +95,35 @@ class UsersController extends AppController {
     public function profile() {
         $User = $this->Session->read('User');
         $this->set('User', $User);
-
     }
     public function editpass() {
+        $User = $this->Session->read('User');
+        $this->set('User', $User);
+        if ($this->request->is('post')) {
+            $data = [
+                'User' => [
+                    'id' => $User['User']['id'],
+                    'password' => trim($this->request->data['User']['password2'])
+                ]
+            ];
+            if($this->User->save($data)){
+                $user = $this->User->find('first', [
+                    'conditions' => [
+                        'User.id' => $User['User']['id']
+                    ],
+                    'recursive' => -1
+                ]);
+                $this->setSession($user);
+                $this->Session->setFlash('Edit password is success','default', array("class" => 'alert alert-success','style' =>'position:'));
+                $this->redirect([
+                    'controller' => 'users',
+                    'action' => 'profile'
+                ]);
+            }else{
+
+            }
+            //pr($this->request->data);
+        }
     }
 
     public function login() {
@@ -110,10 +141,14 @@ class UsersController extends AppController {
             }
             else{
                 $this->redirect(['action' => 'index']);
-                $this->Session->write('User', $user);
+                $this->setSession($user);
                 //pr($this->Session->read('User.User.id'));
             }
         }
+    }
+
+    public function setSession($user=null){
+        $this->Session->write('User', $user);
     }
 
     public function logout() {

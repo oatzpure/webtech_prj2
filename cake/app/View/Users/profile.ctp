@@ -57,41 +57,48 @@
                     <div class="col-sm-4"></div>
                 </div>
             </div>
-            <form id="add-account-form" method="" action="" class="form-horizontal decorform" style="margin-top:2em;padding-left:2em">
-                <div class="form-group text-left">
-                    <label for="firstname" class="col-sm-2 control-label">Firstname </label>
-                    <div class="col-sm-9" >
-                        <?php echo $User['User']['firstname'] ?>
-                    </div>
-                </div>
-                <div class="form-group text-left">
-                    <label for="firstname" class="col-sm-2 control-label">Last name </label>
-                    <div class="col-sm-9" >
-                        <?php echo $User['User']['lastname'] ?>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" class="col-sm-2 control-label">Email</label>
-                    <div class="col-sm-7" >
-                        <?php echo $User['User']['email'] ?>
-                    </div>
-                </div>
-                <table style="width:100%" align="center">
-                    <tr>
-                        <td align="right">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <form id="add-account-form" method="" action="" class="form-horizontal decorform" style="margin-top:2em;padding-left:2em">
+                        <div class="form-group text-left">
+                            <label for="firstname" class="col-sm-3 control-label">Firstname </label>
+                            <div class="col-sm-9" >
+                                <p style="margin-top:0.5em"><?php echo $User['User']['firstname'] ?></p>
+                            </div>
+                        </div>
+                        <div class="form-group text-left">
+                            <label for="firstname" class="col-sm-3 control-label">Last name </label>
+                            <div class="col-sm-9" >
+                                <p style="margin-top:0.5em"><?php echo $User['User']['lastname'] ?></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="col-sm-3 control-label">Email</label>
+                            <div class="col-sm-7" >
+                                <p style="margin-top:0.5em"><?php echo $User['User']['email'] ?></p>
+                            </div>
+                        </div>
+                        <table style="width:100%" align="center">
+                            <tr>
+                                <td align="right">
 
-                            <?php echo $this->Html->link('Edit Profile', array('controller' => 'users','action'=> 'editprofile'),
-                                array( 'class' => 'btn btn-primary'))?>
-                        </td>
-                        <td>&nbsp;&nbsp;</td>
-                        <td align="left">
-                            <?php echo $this->Html->link('Edit Password', array('controller' => 'users','action'=> 'editpass'),
-                                array( 'class' => 'btn btn-primary'))?>
-                        </td>
-                    <tr>
-                </table>
-                <br />
-            </form>
+                                    <?php echo $this->Html->link('Edit Profile', array('controller' => 'users','action'=> 'editprofile'),
+                                        array( 'class' => 'btn btn-primary'))?>
+                                </td>
+                                <td>&nbsp;&nbsp;</td>
+                                <td align="left">
+                                    <?php echo $this->Html->link('Edit Password', array('controller' => 'users','action'=> 'editpass'),
+                                        array( 'class' => 'btn btn-primary'))?>
+                                </td>
+                            <tr>
+                        </table>
+                        <br />
+                    </form>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+
         </div>
     </div>
 </div>

@@ -67,9 +67,9 @@
                         <?php echo $this->Form->input('password1', [
                             'label' => false,
                             'div' => false,
-                            'type' => 'text',
+                            'type' => 'password',
                             'required',
-                            'placeholder' => 'firstname',
+                            'placeholder' => 'old password',
                             'class' => 'form-control'
                         ]);
                         ?>
@@ -78,33 +78,27 @@
                 <div class="form-group text-left">
                     <?php echo$this->Form->label('Deck.name', 'New Password', array('class'=>'col-sm-2 control-label'));?>
                     <div class="col-sm-5" >
-                        <?php echo $this->Form->input('password1', [
+                        <?php echo $this->Form->input('password2', [
                             'label' => false,
                             'div' => false,
-                            'type' => 'text',
+                            'type' => 'password',
                             'required',
-                            'placeholder' => 'firstname',
-                            'class' => 'form-control'
+                            'placeholder' => 'new password',
+                            'class' => 'form-control',
+                            'id' => 'pass1'
                         ]);
                         ?>
                     </div>
                     <label style="color:#999">* more than 2 to 8 alphabet </label>
                 </div>
                 <div class="form-group text-left">
-                    <?php echo$this->Form->label('Deck.name', 'New Password', array('class'=>'col-sm-2 control-label'));?>
+                    <label for="password2" class="col-sm-2 control-label">New Password</label>
                     <div class="col-sm-5" >
-                        <?php echo $this->Form->input('password1', [
-                            'label' => false,
-                            'div' => false,
-                            'type' => 'text',
-                            'required',
-                            'placeholder' => 'firstname',
-                            'class' => 'form-control'
-                        ]);
-                        ?>
-                    </div>
-                    <label style="color:#999">* re-enter password </label>
+                        <input onkeyup="checkPass(); return false;" id="pass2" type="password" class="form-control" id="password2" placeholder="new password" required>
+                        <span id="confirmMessage" class="confirmMessage"></span> </div>
+                    <label style="color:#999">* re-enter password</label>
                 </div>
+
                 <div class="row"><!--this part hav to connect to form that in upper part-->
                     <div class="col-sm-4"></div>
                     <div class="col-sm-3"><?php echo $this->Form->submit('Change Password', [
