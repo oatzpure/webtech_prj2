@@ -53,7 +53,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-4"></div>
-                    <div class="col-sm-4 text-center" > <img src="http://png-5.findicons.com/files/icons/1072/face_avatars/300/a02.png" class="img-circle img-thumbnail img-responsive" style="width:150px;height:150px"/></div>
+                    <div class="col-sm-4 text-center" > <img src="<?php echo "../img/profilepic/".$User['User']['image'] ?>" class="img-circle img-thumbnail img-responsive" style="width:150px;height:150px"/></div>
                     <div class="col-sm-4"></div>
                 </div>
             </div>

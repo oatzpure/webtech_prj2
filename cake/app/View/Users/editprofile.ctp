@@ -42,7 +42,7 @@
     </div><!--end  user icon in cake-->
     <!-- user info field in cake-->
     <div class="col-sm-10" >
-        <div class="container-fluid showcontent">
+        <div class="container-fluid showcontent_nofixes">
             <div class="bgcontent">
                 <div class="row">
                     <div class="col-sm-4"></div>
@@ -51,7 +51,8 @@
                     </div>
                     <div class="col-sm-4"> </div>
                 </div>
-                <?php echo $this->Form->create('User', [
+                <?php echo $this->Form->create('User', array(
+                    'enctype' => 'multipart/form-data',
                     'url' => [
                         'controller' => 'users',
                         'action' => 'editprofile'
@@ -59,14 +60,21 @@
                     'class' =>'form-horizontal decorform',
                     'style' => 'margin-top:2em;padding-left:2em'
 
-                ]); ?>
+                )); ?>
                 <div class="form-group text-left" ><!-- Input File-->
                     <div class="col-sm-4"></div>
                     <div class="col-sm-4 text-center" >
                         <!-- php pull pic-->
-                        <div><img src="" class="img-circle img-thumbnail" style="width:150px;height:150px" /></div>
-                        <label for="exampleInputFile">Profile Picture input</label>
-                        <input type="file" name="file_picture" id="file_picture" required>
+                        <div><img src="<?php echo "../img/profilepic/".$User['User']['image'] ?>" class="img-circle img-thumbnail" style="width:150px;height:150px" /></div>
+                        <?php echo$this->Form->label('Deck.name', 'Profile Picture input');?>
+                            <?php echo $this->Form->input('image', [
+                                'label' => false,
+                                'div' => false,
+                                'type' => 'file',
+                                'value' => $User['User']['image'],
+                                'class' => 'form-control',
+                            ]);
+                            ?>
                     </div>
                     <div class="col-sm-4"></div>
                 </div>
