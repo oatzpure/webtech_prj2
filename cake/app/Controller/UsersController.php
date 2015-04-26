@@ -11,8 +11,8 @@ App::uses('AppController', 'Controller');
 class UsersController extends AppController {
 
     public function index() {
-        $this->User->recursive = 0;
-        $this->set('users', $this->paginate());
+        $User = $this->Session->read('User');
+        $this->set('User', $User);
     }
 
 
@@ -42,6 +42,7 @@ class UsersController extends AppController {
     }
 
     public function editprofile($id = null) {
+        if($this->checkSession()){
         $User = $this->Session->read('User');
         $this->set('User', $User);
         if ($this->request->is('post')) {
@@ -53,7 +54,7 @@ class UsersController extends AppController {
                     'email' => trim($this->request->data['User']['email'])
                 ]
             ];
-            if($this->User->save($data)){
+            if ($this->User->save($data)) {
                 $user = $this->User->find('first', [
                     'conditions' => [
                         'User.id' => $User['User']['id']
@@ -61,15 +62,20 @@ class UsersController extends AppController {
                     'recursive' => -1
                 ]);
                 $this->setSession($user);
-                $this->Session->setFlash('Edit proflie is success','default', array("class" => 'alert alert-success','style' =>'position:'));
+                $this->Session->setFlash('Edit proflie is success', 'default', array("class" => 'alert alert-success', 'style' => 'position:'));
                 $this->redirect([
                     'controller' => 'users',
                     'action' => 'profile'
                 ]);
-            }else{
+            } else {
 
             }
             //pr($this->request->data);
+        }}else{
+            $this->redirect([
+                'controller' => 'users',
+                'action' => 'login'
+            ]);
         }
 
     }
@@ -93,10 +99,18 @@ class UsersController extends AppController {
     }
 
     public function profile() {
+        if($this->checkSession()){
         $User = $this->Session->read('User');
-        $this->set('User', $User);
+        $this->set('User', $User);}
+        else{
+            $this->redirect([
+                'controller' => 'users',
+                'action' => 'login'
+            ]);
+        }
     }
     public function editpass() {
+        if($this->checkSession()){
         $User = $this->Session->read('User');
         $this->set('User', $User);
         if ($this->request->is('post')) {
@@ -123,10 +137,16 @@ class UsersController extends AppController {
 
             }
             //pr($this->request->data);
+        }}else {
+            $this->redirect([
+                'controller' => 'users',
+                'action' => 'login'
+            ]);
         }
     }
 
     public function login() {
+
         if ($this->request->is('post')) {
             //pr($this->request->data);
             $user = $this->User->find('first', [
@@ -140,8 +160,8 @@ class UsersController extends AppController {
                 $this->Session->setFlash('Incorrect Username or Password','default', array("class" => 'alert alert-danger'));
             }
             else{
-                $this->redirect(['action' => 'index']);
                 $this->setSession($user);
+                $this->redirect(['action' => 'index']);
                 //pr($this->Session->read('User.User.id'));
             }
         }
@@ -152,6 +172,18 @@ class UsersController extends AppController {
     }
 
     public function logout() {
+        $this->Session->delete('User');
+        $this->redirect(['action' => 'login']);
+    }
+
+    public function checkSession(){
+        $User = $this->Session->read('User');
+        if($User==null or $User['User']['role']!=2){
+            return false;
+            //$this->redirect(['action' => 'login']);
+        }else{
+            return true;
+        }
 
     }
 
