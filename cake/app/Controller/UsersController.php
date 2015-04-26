@@ -78,12 +78,14 @@ class UsersController extends AppController {
                 ],
                 'recursive' => -1
             ]);
+
             if(empty($user)){
 
             }
             else{
-
                 $this->redirect(['action' => 'index']);
+                $this->Session->write('User', $user);
+                //pr($this->Session->read('User.User.id'));
             }
         }
     }
