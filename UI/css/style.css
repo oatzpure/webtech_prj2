@@ -140,6 +140,18 @@ h1.deepshadow {
     border-style: solid;
    
 }
+.circular_add_cate{
+	margin-top:1em;
+    margin-left: 1.5em;
+    margin-right: auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 150px;
+    background: url("https://cdn2.iconfinder.com/data/icons/freecns-cumulus/16/519719-227_CircledList-128.png") no-repeat scroll 0% 0% / cover transparent;
+    box-shadow: 2px 2px 3px 1px #3C3C3C;
+    border-color: #DC2201;
+    border-style: solid;
+	}
 
 
 .circular_logout {
