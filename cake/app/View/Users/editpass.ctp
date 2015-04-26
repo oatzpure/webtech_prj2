@@ -42,7 +42,7 @@
     </div><!--end  user icon in cake-->
     <!-- user info field in cake-->
     <div class="col-sm-10" >
-        <div class="container-fluid showcontent">
+        <div class="container-fluid showcontent_nofixes">
             <div class="bgcontent">
                 <div class="row">
                     <div class="col-sm-3"></div>
@@ -114,7 +114,6 @@
                             array( 'class' => 'btn btn-danger'))?></div>
                     <div class="col-sm-4"></div>
                 </div>
-                <?php echo $this->Form->end(); ?>
                 <?php echo $this->Form->end(); ?>
 
                 <!--                <hr />-->

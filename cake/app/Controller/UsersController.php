@@ -43,6 +43,29 @@ class UsersController extends AppController {
     }
 
     public function editprofile($id = null) {
+        $User = $this->Session->read('User');
+        $this->set('User', $User);
+        if ($this->request->is('post')) {
+            $data = [
+                'User' => [
+                    'id' => $User['User']['id'],
+                    'firstname' => trim($this->request->data['User']['firstname']),
+                    'lastname' => trim($this->request->data['User']['lastname']),
+                    'email' => trim($this->request->data['User']['email'])
+                ]
+            ];
+            if($this->User->save($data)){
+                $this->Session->setFlash('Edit proflie is success','default', array("class" => 'alert alert-success','style' =>'position:'));
+                $this->redirect([
+                    'controller' => 'users',
+                    'action' => 'profile'
+                ]);
+
+            }else{
+
+            }
+            //pr($this->request->data);
+        }
 
     }
 
@@ -64,8 +87,12 @@ class UsersController extends AppController {
         return $this->redirect(array('action' => 'index'));
     }
 
-    public function editpass() {
+    public function profile() {
+        $User = $this->Session->read('User');
+        $this->set('User', $User);
 
+    }
+    public function editpass() {
     }
 
     public function login() {
@@ -79,7 +106,7 @@ class UsersController extends AppController {
                 'recursive' => -1
             ]);
             if(empty($user)){
-
+                $this->Session->setFlash('Incorrect Username or Password','default', array("class" => 'alert alert-danger'));
             }
             else{
                 $this->redirect(['action' => 'index']);

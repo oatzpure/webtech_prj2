@@ -78,7 +78,7 @@
                             'div' => false,
                             'type' => 'text',
                             'required',
-                            'placeholder' => 'firstname',
+                            'value' => $User['User']['firstname'],
                             'class' => 'form-control'
                         ]);
                         ?>
@@ -93,7 +93,7 @@
                             'div' => false,
                             'type' => 'text',
                             'required',
-                            'placeholder' => 'firstname',
+                            'value' => $User['User']['lastname'],
                             'class' => 'form-control'
                         ]);
                         ?>
@@ -108,7 +108,7 @@
                             'div' => false,
                             'type' => 'text',
                             'required',
-                            'placeholder' => 'email',
+                            'value' => $User['User']['email'],
                             'class' => 'form-control'
                         ]);
                         ?>
@@ -118,7 +118,7 @@
 
                 <div class="row"><!--this part hav to connect to form that in upper part-->
                     <div class="col-sm-4"></div>
-                    <div class="col-sm-2"><?php echo $this->Form->submit('Edit Profile', [
+                    <div class="col-sm-2"><?php echo $this->Form->submit('Submit', [
                             'class' => 'btn btn-primary'
                         ]);?></div>
                     <div class="col-sm-2"><?php echo $this->Html->link('Cancel', array('controller' => 'users','action'=> 'index'),
