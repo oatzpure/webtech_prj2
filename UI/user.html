@@ -55,7 +55,46 @@
         </div><!--end  admin icon in cake-->
         <!-- admin info field in cake-->
         <div class="col-sm-10" >
-        	<div class="container-fluid showcontent"> 
+        	<div class="container-fluid showcontent_nofixes"> 
+            	<div class="col-sm-12 text-center"><h2>Deck List</h2></div>
+            	<div class="col-sm-12">
+            		<div class="dropdown">
+ 						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">Categories <span class="caret"></span>
+  </button>
+  						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1"><!--this part pull from cate table-->
+    						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">cate1</a></li><!-- link with search-->
+    						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">cate2</a></li>   					
+ 					 	</ul>
+					</div>
+            	</div>
+                
+                
+                <!--this part pull deck to show all by 6 newest deck-->
+                <div class="deckshow container-fluid">
+                	<div class="row">
+                    	<!-- this part is forn of deck that show-->
+                    	<div class="col-sm-3 badgestyle1 marginlr text-center">
+                        	<h4><strong>Name</strong></h4><!-- deck name-->                            
+                            	<div class="col-sm-10">Description</div><!-- deck description-->
+                           
+                            
+                            <div class="row">                            	
+                            	<div class="col-sm-1"></div>
+                            	<div class="col-sm-5">
+                                	<button class="btn btn-info">View</button>
+                                </div>
+                                <div class="col-sm-5">
+                                	<button class="btn btn-primary">Play</button>
+                                </div> 
+                                <div class="col-sm-1"></div>
+                            </div>                   
+                        
+                        </div>
+                       
+                      
+                        
+                    </div>
+                </div>
             </div>
         </div><!--end admin info field in cake-->
     </div>
