@@ -78,7 +78,6 @@ class UsersController extends AppController {
                 ],
                 'recursive' => -1
             ]);
-
             if(empty($user)){
 
             }
