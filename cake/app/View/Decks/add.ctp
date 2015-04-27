@@ -138,9 +138,7 @@
                                         'type' => 'text',
                                         'required',
                                         'placeholder' => 'Description',
-                                        'class' => 'form-control'
-										
-										
+                                        'class' => 'form-contro;'
                                     ]);
                                     ?>
                                 </div>
