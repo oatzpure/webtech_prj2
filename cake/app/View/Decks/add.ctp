@@ -149,14 +149,15 @@
                             <div class="row">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4 text-left" >
-                                    <div><img  id="cardP1" src="#" class="img-thumbnail"  style="width:150px;height:150px" /></div>
+                                    <div><img  id="cfp1" src="" class="img-thumbnail"  style="width:150px;height:150px" /></div>
                                     <?php echo$this->Form->label('Deck.name', 'Card Front');?>
-                                    <?php echo $this->Form->input('front1', [
-                                        'id' => 'cardU1',
+                                    <?php echo $this->Form->input('front1', [                                        
 										'label' => false,
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
+										'onchange' => 'cf1(this);',
+										'accept' => 'image/*'
 										
 										
                                     ]);
@@ -164,14 +165,15 @@
                                 </div>
 
                                 <div class="col-sm-4 text-left" >
-                                    <div><img class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <div><img id="cbp1" src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
                                     <?php echo$this->Form->label('Deck.name', 'Card Back');?>
                                     <?php echo $this->Form->input('back1', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'readURL(this);'
+										'onchange' => 'cb1(this);'
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
@@ -201,25 +203,29 @@
                             <div class="row">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <div><img id="cfp2" src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
                                     <?php echo$this->Form->label('Deck.name', 'Card Front');?>
                                     <?php echo $this->Form->input('front2', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cf2(this);'
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
 
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
-                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <div><img id="cbp2" src=""  class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Back');?>
                                     <?php echo $this->Form->input('back2', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cb2(this);'
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
@@ -247,25 +253,29 @@
                             <div class="row">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <div><img id="cfp3" src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
                                     <?php echo$this->Form->label('Deck.name', 'Card Front');?>
                                     <?php echo $this->Form->input('front3', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cf3(this);'
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
 
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
-                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <div><img id="cbp3" src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Back');?>
                                     <?php echo $this->Form->input('back3', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cb3(this);'
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
@@ -295,25 +305,29 @@
                             <div class="row">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <div><img id="cfp4" src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
                                     <?php echo$this->Form->label('Deck.name', 'Card Front');?>
                                     <?php echo $this->Form->input('front4', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cf4(this);'
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
 
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
-                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <div><img  id="cbp4" src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Back');?>
                                     <?php echo $this->Form->input('back4', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cb4(this);'
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
@@ -343,25 +357,29 @@
                             <div class="row">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <div><img id="cfp5" src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
                                     <?php echo$this->Form->label('Deck.name', 'Card Front');?>
                                     <?php echo $this->Form->input('front5', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cf5(this);',
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
 
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
-                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <div><img id="cbp5"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Back');?>
                                     <?php echo $this->Form->input('back5', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cb5(this);',
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
@@ -391,25 +409,29 @@
                             <div class="row">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <div><img id="cfp6"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
                                     <?php echo$this->Form->label('Deck.name', 'Card Front');?>
                                     <?php echo $this->Form->input('front6', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cf6(this);',
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
 
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
-                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <div><img id="cbp6" src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Back');?>
                                     <?php echo $this->Form->input('back6', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cb6(this);',
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
@@ -437,25 +459,29 @@
                             <div class="row">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <div><img id="cfp7" src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
                                     <?php echo$this->Form->label('Deck.name', 'Card Front');?>
                                     <?php echo $this->Form->input('front7', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cf7(this);',
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
 
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
-                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <div><img id="cbp7"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Back');?>
                                     <?php echo $this->Form->input('back7', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cb7(this);',
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
@@ -482,25 +508,29 @@
                             <div class="row">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <div><img id="cfp8"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
                                     <?php echo$this->Form->label('Deck.name', 'Card Front');?>
                                     <?php echo $this->Form->input('front8', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cf8(this);',
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
 
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
-                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <div><img id="cbp8"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Back');?>
                                     <?php echo $this->Form->input('back8', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cb8(this);',
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
@@ -528,25 +558,29 @@
                             <div class="row">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <div><img id="cfp9"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
                                     <?php echo$this->Form->label('Deck.name', 'Card Front');?>
                                     <?php echo $this->Form->input('front9', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cf9(this);',
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
 
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
-                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <div><img id="cbp9"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Back');?>
                                     <?php echo $this->Form->input('back9', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cb9(this);',
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
@@ -573,31 +607,36 @@
                             <div class="row">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <div><img id="cfp10"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
                                     <?php echo$this->Form->label('Deck.name', 'Card Front');?>
                                     <?php echo $this->Form->input('front10', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cf10(this);',
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
 
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
-                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <div><img id="cbp10"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Back');?>
                                     <?php echo $this->Form->input('back10', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'cb10(this);'
+										'accept' => 'image/*'
                                     ]);
                                     ?>
                                 </div>
                             </div>
 
 
+<<<<<<< HEAD
 <!--                            <br>-->
 <!--                            <div class="form-group text-left">-->
 <!--                                --><?php //echo$this->Form->label('Deck.name', '11.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
@@ -823,6 +862,253 @@
 //                                    ?>
 <!--                                </div>-->
 <!--                            </div>-->
+=======
+                            <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '11.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans11', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img id="cfp11"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front11', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required',
+										'onchange' => 'cf11(this);',
+										'accept' => 'image/*'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img id="cbp11"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Back');?>
+                                    <?php echo $this->Form->input('back11', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required',
+										'onchange' => 'cb11(this);'
+										'accept' => 'image/*'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '12.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans12', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img id="cfp12"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front12', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required',
+										'onchange' => 'cf12(this);'
+										'accept' => 'image/*'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img id="cbp12"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Back');?>
+                                    <?php echo $this->Form->input('back12', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required',
+										'onchange' => 'cb12(this);'
+										'accept' => 'image/*'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '13.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans13', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img id="cfp13"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front13', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required',
+										'onchange' => 'cf13(this);'
+										'accept' => 'image/*'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img id="cbp13"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Back');?>
+                                    <?php echo $this->Form->input('back13', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required',
+										'onchange' => 'cb13(this);'
+										'accept' => 'image/*'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '14.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans14', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img id="cfp14"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front14', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required',
+										'onchange' => 'cf14(this);'
+										'accept' => 'image/*'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img id="cbp14"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Back');?>
+                                    <?php echo $this->Form->input('back14', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required',
+										'onchange' => 'cb14(this);'
+										'accept' => 'image/*'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+              <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '15.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans15', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img id="cfp15"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front15', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required',
+										'onchange' => 'cf15(this);'
+										'accept' => 'image/*'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img id="cbp15"src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Back');?>
+                                    <?php echo $this->Form->input('back15', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required',
+										'onchange' => 'cb15(this);'
+										'accept' => 'image/*'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+>>>>>>> origin/master
 
                         </div>
                     </div>
@@ -847,19 +1133,364 @@
 
 </div>
 <script>
- {function readURL(input) {
-
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-            $('#cardP1').attr('src', e.target.result);
-        }
-
-        reader.readAsDataURL(input.files[0]);
-   	 }
-	}
-
-  $("#cardU1").change(function(){readURL(this);});
- }
+ function cf1(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cfp1')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cb1(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cbp1')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cf2(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cfp2')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cb2(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cbp2')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cf3(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cfp3')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cb3(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cbp3')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cf4(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cfp4')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cb4(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cbp4')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cf5(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cfp5')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cb5(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cbp5')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cf6(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cfp6')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cb6(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cbp6')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cf7(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cfp7')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cb7(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cbp7')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cf8(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cfp8')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cb8(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cbp8')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cf9(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cfp9')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cb9(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cbp9')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cf10(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cfp10')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cb01(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cbp10')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cf11(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cfp11')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cb11(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cbp11')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cf12(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cfp12')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cb12(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cbp12')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cf13(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cfp13')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cb13(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cbp13')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cf14(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cfp14')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cb14(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cbp14')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cf15(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cfp15')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+ function cb15(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#cbp15')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(150);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
   </script>
