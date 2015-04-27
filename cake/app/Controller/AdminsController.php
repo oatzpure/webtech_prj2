@@ -12,7 +12,13 @@ class AdminsController extends AppController {
     }
 
     public function deck() {
-
+        $this->loadModel('Category');
+        $categorys = $this->Category->find('all', [
+            'order' => [
+                'Category.name' => 'ASC'
+            ]
+        ]);
+        $this->set('categorys', $categorys);
     }
 }
 ?>
