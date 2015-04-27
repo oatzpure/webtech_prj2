@@ -101,7 +101,21 @@
                                     ?>
                                 </div>
                             </div>
+                            <div class="form-group text-left">
+                            	 <?php echo$this->Form->label('Deck.name', 'Categories', array('class'=>'col-sm-3 control-label'));?>
+                            	 <div class="col-sm-3" >
+                                 	<select class="form-control">
+  										<option value="volvo">test</option>
+  										<option value="saab">test</option>
+  										<option value="opel">test</option>
+  										<option value="audi">test</option>
+									</select>
+                                   
+                                </div>
+                            </div>                          
+                             
                         </div>
+                        <div class="col-sm-2"></div>
                     </div>
                     <div id="cardindeck">
                         <div class="col-sm-12 badgestyle1" id='card1' style="padding-top:1em;padding-bottom:1em">
@@ -117,6 +131,8 @@
                                         'required',
                                         'placeholder' => 'Description',
                                         'class' => 'form-control'
+										
+										
                                     ]);
                                     ?>
                                 </div>
@@ -125,25 +141,29 @@
                             <div class="row">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <div><img  id="cardP1" src="#" class="img-thumbnail"  style="width:150px;height:150px" /></div>
                                     <?php echo$this->Form->label('Deck.name', 'Card Front');?>
                                     <?php echo $this->Form->input('front1', [
-                                        'label' => false,
+                                        'id' => 'cardU1',
+										'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										
+										
                                     ]);
                                     ?>
                                 </div>
 
                                 <div class="col-sm-4 text-left" >
-                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
-                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <div><img class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Back');?>
                                     <?php echo $this->Form->input('back1', [
                                         'label' => false,
                                         'div' => false,
                                         'type' => 'file',
-                                        'required'
+                                        'required',
+										'onchange' => 'readURL(this);'
                                     ]);
                                     ?>
                                 </div>
@@ -818,3 +838,20 @@
     </div>
 
 </div>
+<script>
+ {function readURL(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#cardP1').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+   	 }
+	}
+
+  $("#cardU1").change(function(){readURL(this);});
+ }
+  </script>
