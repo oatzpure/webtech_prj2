@@ -10,6 +10,13 @@ App::uses('AppController', 'Controller');
 
 class DecksController extends AppController{
     public function add() {
+        $this->loadModel('Category');
+        $categorys = $this->Category->find('all', [
+            'order' => [
+                'Category.name' => 'ASC'
+            ]
+        ]);
+        $this->set('categorys', $categorys);
         if($this->request->is('POST')){
             $User = $this->Session->read('User');
             //pr($this->request->data);

@@ -15,11 +15,13 @@
  */
 
 $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-$cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
+$cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version());
+Router::connect('/', array('controller' => 'users', 'action' => 'login'));
 ?>
 <!DOCTYPE html>
 <html>
 <head>
+
     <?php echo $this->Html->charset(); ?>
     <meta name="viewport" content="width=device-width, initialscale=1,
 maximum-scale=1, user-scalable=no">

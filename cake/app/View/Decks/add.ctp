@@ -103,12 +103,11 @@
                             </div>
                             <div class="form-group text-left">
                             	 <?php echo$this->Form->label('Deck.name', 'Categories', array('class'=>'col-sm-3 control-label'));?>
-                            	 <div class="col-sm-3" >
+                            	 <div class="col-sm-5" >
                                  	<select class="form-control">
-  										<option value="volvo">test</option>
-  										<option value="saab">test</option>
-  										<option value="opel">test</option>
-  										<option value="audi">test</option>
+                                        <?php foreach ($categorys as $categorys): ?>
+  										<option value="<?php echo $categorys['Category']['id']?>"><?php echo $categorys['Category']['name']?></option>
+                                        <?php endforeach; ?>
 									</select>
                                    
                                 </div>
