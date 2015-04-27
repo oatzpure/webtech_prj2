@@ -168,7 +168,16 @@ class UsersController extends AppController {
             }
             else{
                 $this->setSession($user);
-                $this->redirect(['action' => 'index']);
+
+                if($user['User']['role']=='1'){
+                    $this->redirect([
+                        'controller' => 'admins',
+                        'action' => 'index'
+                    ]);
+                }else{
+                    $this->redirect(['action' => 'index']);
+                }
+
                 //pr($this->Session->read('User.User.id'));
             }
         }
