@@ -10,6 +10,7 @@ class AdminsController extends AppController {
         $User = $this->Session->read('User');
         $this->set('User', $User);
     }
+<<<<<<< HEAD
     
     public function manage_account(){
         $User = $this->Session->read('User');
@@ -19,6 +20,17 @@ class AdminsController extends AppController {
             'tests' => $this->Admin->get_user()
         ];
         $this->load->view('manage_account', $data);
+=======
+
+    public function deck() {
+        $this->loadModel('Category');
+        $categorys = $this->Category->find('all', [
+            'order' => [
+                'Category.name' => 'ASC'
+            ]
+        ]);
+        $this->set('categorys', $categorys);
+>>>>>>> origin/master
     }
 }
 ?>
