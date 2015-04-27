@@ -39,9 +39,10 @@
         		<button type="button" class="circular_profile btn btn-danger" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><span class="badge " style="margin-top:7em;margin-left:5em">+</span></button>
                 <div style="margin-top:1em"><span class="label label-info"><?php echo $User['User']['firstname'] ?> <?php echo $User['User']['lastname'] ?></span></div>
                 <div class="collapse " id="collapseExample">
-                	<button type="button" class="circular_add btn btn-danger" data-placement="right" data-toggle="tooltip" data-original-title="Add Quiz"></button>
+
+                    <button type="button" class="circular_add btn btn-danger" data-placement="right" data-toggle="tooltip" data-original-title="Add Quiz"></button>
                     <button type="button" class="circular_add_cate btn btn-danger" data-placement="right" data-toggle="tooltip" data-original-title="Add Categories"></button>
-            		<button type="button" class="circular_manage_quiz btn btn-danger" data-placement="right" data-toggle="tooltip" data-original-title="Manage Quiz"></button>
+                    <?php echo $this->Html->link("", array('controller' => 'admins','action'=> 'deck'), array( 'class' => 'circular_manage_quiz btn btn-danger','data-placement' => 'right','data-toggle'=>'tooltip','data-original-title'=>'Manage Quiz'))?>
             		<button type="button" class="circular_manage_account btn btn-danger" data-placement="right" data-toggle="tooltip" data-original-title="Manage Account"></button>
                     <button type="button" class="circular_logout btn-danger" data-placement="right" data-toggle="tooltip" data-original-title="Log Out"></button>
                 </div>

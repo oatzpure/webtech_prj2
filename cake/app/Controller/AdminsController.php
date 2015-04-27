@@ -10,5 +10,9 @@ class AdminsController extends AppController {
         $User = $this->Session->read('User');
         $this->set('User', $User);
     }
+
+    public function deck() {
+
+    }
 }
 ?>
