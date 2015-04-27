@@ -172,7 +172,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cb1(this);'
+										'onchange' => 'cb1(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -210,7 +210,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cf2(this);'
+										'onchange' => 'cf2(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -224,7 +224,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cb2(this);'
+										'onchange' => 'cb2(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -260,7 +260,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cf3(this);'
+										'onchange' => 'cf3(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -274,7 +274,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cb3(this);'
+										'onchange' => 'cb3(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -312,7 +312,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cf4(this);'
+										'onchange' => 'cf4(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -326,7 +326,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cb4(this);'
+										'onchange' => 'cb4(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -628,7 +628,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cb10(this);'
+										'onchange' => 'cb10(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -905,7 +905,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cb11(this);'
+										'onchange' => 'cb11(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -940,7 +940,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cf12(this);'
+										'onchange' => 'cf12(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -954,7 +954,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cb12(this);'
+										'onchange' => 'cb12(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -989,7 +989,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cf13(this);'
+										'onchange' => 'cf13(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -1003,7 +1003,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cb13(this);'
+										'onchange' => 'cb13(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -1038,7 +1038,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cf14(this);'
+										'onchange' => 'cf14(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -1052,7 +1052,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cb14(this);'
+										'onchange' => 'cb14(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -1088,7 +1088,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cf15(this);'
+										'onchange' => 'cf15(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -1102,7 +1102,7 @@
                                         'div' => false,
                                         'type' => 'file',
                                         'required',
-										'onchange' => 'cb15(this);'
+										'onchange' => 'cb15(this);',
 										'accept' => 'image/*'
                                     ]);
                                     ?>
@@ -1361,7 +1361,7 @@
     reader.readAsDataURL(input.files[0]);
   }
 }
- function cb01(input) {
+ function cb10(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
     reader.onload = function (e) {
