@@ -52,7 +52,8 @@
             <div class="addDeck text-center">
                 <h2>Add Deck</h2>
                 <div class="container-fluid">
-                <?php echo $this->Form->create('Deck', [
+                <?php echo $this->Form->create('Deck',array(
+                    'enctype' => 'multipart/form-data',
                     'url' => [
                         'controller' => 'decks',
                         'action' => 'add'
@@ -60,7 +61,7 @@
                     'class' =>'form-horizontal decorform',
                     'style' => 'margin-top:2em;padding-left:2em'
 
-                ]); ?>
+                )); ?>
                     <div class="row">
                         <div class="col-sm-2"></div>
                         <div class="col-sm-8">
