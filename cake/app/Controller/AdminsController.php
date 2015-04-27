@@ -10,5 +10,15 @@ class AdminsController extends AppController {
         $User = $this->Session->read('User');
         $this->set('User', $User);
     }
+    
+    public function manage_account(){
+        $User = $this->Session->read('User');
+        $this->set('User', $User);
+        
+        $data = [
+            'tests' => $this->Admin->get_user()
+        ];
+        $this->load->view('manage_account', $data);
+    }
 }
 ?>
