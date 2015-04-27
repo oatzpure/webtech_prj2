@@ -52,27 +52,21 @@
             <div class="addDeck text-center">
                 <h2>Add Deck</h2>
                 <div class="container-fluid">
+                <?php echo $this->Form->create('Deck', [
+                    'url' => [
+                        'controller' => 'decks',
+                        'action' => 'add'
+                    ],
+                    'class' =>'form-horizontal decorform',
+                    'style' => 'margin-top:2em;padding-left:2em'
+
+                ]); ?>
                     <div class="row">
                         <div class="col-sm-2"></div>
                         <div class="col-sm-8">
-                            <?php echo $this->Form->create('Deck', [
-                                'url' => [
-                                    'controller' => 'decks',
-                                    'action' => 'add'
-                                ],
-                                'class' =>'form-horizontal decorform',
-                                'style' => 'margin-top:2em;padding-left:2em'
 
-                            ]); ?>
 
-                            <?php echo $this->Form->create('Deck', [
-                                'url' => [
-                                    'controller' => 'decks',
-                                    'action' => 'add'
-                                ],
-                                'class' =>'form-horizontal',
-                                'id' => 'deckdescription'
-                            ]); ?>
+
 
 
                             <div class="form-group text-left">
@@ -106,21 +100,12 @@
                                     ?>
                                 </div>
                             </div>
-
-                            <?php echo $this->Form->end(); ?>
                         </div>
-
                     </div>
                     <div id="cardindeck">
                         <div class="col-sm-12 badgestyle1" id='card1' style="padding-top:1em;padding-bottom:1em">
-                                <?php echo $this->Form->create('Card', [
-                                    'url' => [
-                                        'controller' => 'decks',
-                                        'action' => 'add'
-                                    ],
-                                    'class' =>'form-horizontal ',
-                                ]); ?>
 
+                            <form class="form-horizontal">
                             <div class="form-group text-left">
                                 <?php echo$this->Form->label('Deck.name', '1.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
                                 <div class="col-sm-3" >
@@ -136,55 +121,699 @@
                                 </div>
                             </div>
 
-
-
-                                <div class="row">
-                                    <div class="col-sm-2"></div>
-                                    <div class="col-sm-4 text-left" >
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
                                     <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
                                     <?php echo$this->Form->label('Deck.name', 'Card Front');?>
-                                            <?php echo $this->Form->input('file_picture', [
-                                                'label' => false,
-                                                'div' => false,
-                                                'type' => 'file',
-                                                'required'
-                                            ]);
-                                            ?>
-                                    </div>
-
-
-
-                                    <div class="col-sm-4 text-left" >
-                                        <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
-                                        <?php echo$this->Form->label('Deck.name', 'Back Front');?>
-                                        <?php echo $this->Form->input('file_picture', [
-                                            'label' => false,
-                                            'div' => false,
-                                            'type' => 'file',
-                                            'required'
-                                        ]);
-                                        ?>
-                                    </div>
-
+                                    <?php echo $this->Form->input('front1', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
                                 </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <?php echo $this->Form->input('back1', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+
+                            <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '2.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans2', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front2', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <?php echo $this->Form->input('back2', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '3.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans3', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front3', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <?php echo $this->Form->input('back3', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '4.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans4', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front4', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <?php echo $this->Form->input('back4', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+
+                            <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '5.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans5', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front5', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <?php echo $this->Form->input('back5', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+                            <br>
+
+
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '6.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans6', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front6', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <?php echo $this->Form->input('back6', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+                            <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '7.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans7', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front7', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <?php echo $this->Form->input('back7', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '8.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans8', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front8', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <?php echo $this->Form->input('back8', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+                            <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '9.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans9', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front9', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <?php echo $this->Form->input('back9', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '10.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans10', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front10', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <?php echo $this->Form->input('back10', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+                            <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '11.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans11', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front11', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <?php echo $this->Form->input('back11', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '12.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans12', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front12', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <?php echo $this->Form->input('back12', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '13.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans13', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front13', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <?php echo $this->Form->input('back13', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '14.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans14', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front14', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <?php echo $this->Form->input('back14', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+              <br>
+                            <div class="form-group text-left">
+                                <?php echo$this->Form->label('Deck.name', '15.) Card Answer', array('class'=>'col-sm-2 control-label'));?>
+                                <div class="col-sm-3" >
+                                    <?php echo $this->Form->input('ans15', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'text',
+                                        'required',
+                                        'placeholder' => 'Description',
+                                        'class' => 'form-control'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Card Front');?>
+                                    <?php echo $this->Form->input('front15', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+
+                                <div class="col-sm-4 text-left" >
+                                    <div><img src="" class="img-thumbnail" style="width:150px;height:150px" /></div>
+                                    <?php echo$this->Form->label('Deck.name', 'Back Front');?>
+                                    <?php echo $this->Form->input('back15', [
+                                        'label' => false,
+                                        'div' => false,
+                                        'type' => 'file',
+                                        'required'
+                                    ]);
+                                    ?>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
 
+
+
                     <div class="row"><!--this part hav to connect to form that in upper part-->
                         <div class="col-sm-4"></div>
-                        <div class="col-sm-2"><?php echo $this->Form->submit('Sign Up', [
+                        <div class="col-sm-2"><?php echo $this->Form->submit('Submit', [
                                 'class' => 'btn btn-primary'
                             ]);?></div>
                         <div class="col-sm-2"><?php echo $this->Html->link('Cancel', array('controller' => 'users','action'=> 'index'),
                                 array( 'class' => 'btn btn-danger'))?></div>
                         <div class="col-sm-4"></div>
                     </div>
-                    <?php echo $this->Form->end(); ?>
+                <?php echo $this->Form->end(); ?>
                 </div>
             </div>
         </div>
         <!--end play field in cake-->
-</div>
+    </div>
 
 </div>

@@ -6,8 +6,12 @@
  * Time: 1:01
  */
 
-App::uses('AppModel', 'Model');
 
 class Deck  extends AppModel {
-
+    public $hasMany = [
+        'Card' => [
+            'className' => 'Card'
+        ]
+    ];
 }
+?>

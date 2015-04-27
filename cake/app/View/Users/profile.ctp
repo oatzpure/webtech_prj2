@@ -91,6 +91,11 @@
                                     <?php echo $this->Html->link('Edit Password', array('controller' => 'users','action'=> 'editpass'),
                                         array( 'class' => 'btn btn-primary'))?>
                                 </td>
+                                <td>&nbsp;&nbsp;</td>
+                                <td align="left">
+                                    <?php echo $this->Html->link('Back', array('controller' => 'users','action'=> 'index'),
+                                        array( 'class' => 'btn btn-success'))?>
+                                </td>
                             <tr>
                         </table>
                         <br />
