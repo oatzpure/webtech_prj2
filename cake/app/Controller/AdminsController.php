@@ -10,10 +10,7 @@ class AdminsController extends AppController {
         $User = $this->Session->read('User');
         $this->set('User', $User);
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    
+
     public function manage_account(){
         $User = $this->Session->read('User');
         $this->set('User', $User);
@@ -22,8 +19,7 @@ class AdminsController extends AppController {
             'tests' => $this->Admin->get_user()
         ];
         $this->load->view('manage_account', $data);
-=======
->>>>>>> d3cb90a43d0729b6915e165949239eff77fc0978
+
 
     public function deck() {
         $this->loadModel('Category');
@@ -33,10 +29,7 @@ class AdminsController extends AppController {
             ]
         ]);
         $this->set('categorys', $categorys);
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
->>>>>>> d3cb90a43d0729b6915e165949239eff77fc0978
+
     }
 }
 ?>
