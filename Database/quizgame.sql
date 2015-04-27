@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2015 at 08:29 PM
+-- Generation Time: Apr 27, 2015 at 05:31 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `brainmemo`
+-- Database: `quizgame`
 --
 
 -- --------------------------------------------------------
@@ -136,8 +136,18 @@ CREATE TABLE IF NOT EXISTS `users` (
   `role` char(2) COLLATE utf8_unicode_ci NOT NULL,
   `status` char(10) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
-  `modified` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `modified` datetime NOT NULL,
+  `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `email`, `password`, `role`, `status`, `created`, `modified`, `image`) VALUES
+(1, '4armer', 'Chaiwith', 'Santaweesuk', 'a.chaiwith@gmail.com', '88888888', '1', '', '2015-04-20 13:54:15', '2015-04-21 16:11:23', ''),
+(3, 'test1', 'test12', 'test11', 'test1@gmail.com', '77777777', '2', '', '2015-04-20 21:26:57', '2015-04-26 16:23:58', 'huge-cats-16__605.jpg'),
+(4, 'test2', 'test2', 'test2', 'test2@gmail.com', '88888888', '2', '', '2015-04-20 21:27:59', '2015-04-20 21:27:59', '');
 
 -- --------------------------------------------------------
 
@@ -253,7 +263,7 @@ MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `user_badges`
 --
