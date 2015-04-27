@@ -242,4 +242,8 @@ class UsersController extends AppController {
             }
         }
     }
+    
+    function badge(){
+        
+    }
 }
